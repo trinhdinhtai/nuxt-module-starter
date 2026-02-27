@@ -39,7 +39,7 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.17.5"
+    "@nuxt/kit": "^3.21.1"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.11.0",
