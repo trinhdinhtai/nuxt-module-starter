@@ -1,10 +1,15 @@
 {
-  "name": "my-module",
+  "name": "nuxt-module-starter",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
-  "license": "MIT",
   "type": "module",
+  "license": "MIT",
+  "packageManager": "bun@1.2.4",
+  "private": true,
+  "author": "TaiTD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trinhdinhtai/nuxt-module-starter"
+  },
   "exports": {
     ".": {
       "types": "./dist/types.d.mts",
@@ -24,9 +29,9 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
-    "dev": "npm run dev:prepare && nuxi dev playground",
+    "dev": "turbo run dev --filter=my-module-playground",
+    "dev:prepare": "turbo run dev:prepare",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
@@ -37,24 +42,25 @@
     "@nuxt/kit": "^3.17.5"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^2.5.0",
-    "@nuxt/eslint-config": "^1.4.1",
-    "@nuxt/module-builder": "^1.0.1",
-    "@nuxt/schema": "^3.17.5",
-    "@nuxt/test-utils": "^3.19.1",
+    "@nuxt/eslint-config": "^1.11.0",
     "@types/node": "latest",
     "changelogen": "^0.6.1",
     "eslint": "^9.28.0",
-    "nuxt": "^3.17.5",
+    "turbo": "^2.6.1",
     "typescript": "~5.8.3",
     "vitest": "^3.2.3",
     "vue-tsc": "^2.2.10"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "unrs-resolver"
-    ]
-  }
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "better-sqlite3",
+    "esbuild",
+    "sharp",
+    "unrs-resolver",
+    "vue-demi"
+  ]
 }
