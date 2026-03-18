@@ -45,7 +45,7 @@
     "@nuxt/eslint-config": "^1.15.2",
     "@types/node": "latest",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.4",
+    "eslint": "^10.0.3",
     "turbo": "^2.8.17",
     "typescript": "~5.9.3",
     "vitest": "^3.2.4",
