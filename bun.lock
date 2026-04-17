@@ -5,7 +5,7 @@
     "": {
       "name": "nuxt-module-starter",
       "dependencies": {
-        "@nuxt/kit": "^4.3.1",
+        "@nuxt/kit": "^4.4.2",
       },
       "devDependencies": {
         "@nuxt/eslint-config": "^1.15.2",
@@ -22,22 +22,22 @@
       "name": "my-module-playground",
       "dependencies": {
         "my-module": "workspace:*",
-        "nuxt": "^4.3.1",
+        "nuxt": "^4.4.2",
       },
     },
     "packages/my-module": {
       "name": "my-module",
       "version": "1.0.0",
       "dependencies": {
-        "@nuxt/kit": "^4.3.1",
+        "@nuxt/kit": "^4.4.2",
       },
       "devDependencies": {
         "@nuxt/devtools": "^3.2.4",
         "@nuxt/module-builder": "^1.0.2",
-        "@nuxt/schema": "^4.3.1",
+        "@nuxt/schema": "^4.4.2",
         "@nuxt/test-utils": "^4.0.0",
         "changelogen": "^0.6.2",
-        "nuxt": "^4.3.1",
+        "nuxt": "^4.4.2",
         "typescript": "^5.9.3",
       },
     },
